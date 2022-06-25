@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package blackjack;
 
 import casino.Player;
@@ -10,10 +5,7 @@ import constants.Constants;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Karin Whiting UCF COP 3330
- */
+
 public class BlackJack
 {
     private Player player;
@@ -166,7 +158,6 @@ public class BlackJack
         System.out.println("Dealer must STAND if their score is 17 or higher");
         System.out.println("If the player wins the hand, they receive $" + Constants.BJ_WIN);
         System.out.println("If the dealer wins the hand, the $" + Constants.BJ_BET + " bet is lost");
-        System.out.println("If it is a PUSH, the player keeps their $" + Constants.BJ_BET + " bet");      
-        
+        System.out.println("If it is a PUSH, the player keeps their $" + Constants.BJ_BET + " bet");     
     }
 }

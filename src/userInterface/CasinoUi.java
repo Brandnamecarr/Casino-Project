@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userInterface;
 
 import casino.Casino;
@@ -16,10 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Karin Whiting UCF COP 3330
- */
+
 public class CasinoUi implements ActionListener
 {
     private JFrame frame;
@@ -63,7 +55,7 @@ public class CasinoUi implements ActionListener
     {
         frame = new JFrame("Knights Casino");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(new Dimension(600, 500));        
+        frame.setSize(new Dimension(600, 400));        
 
         // set up the button panel
         buttonPanel = new JPanel();
@@ -107,6 +99,7 @@ public class CasinoUi implements ActionListener
         frame.repaint();
     }
     
+    //gets & sets & updates the UI to the most recent player cash. 
     public void updatePlayerUi()
     {
         playerUi.getCashBalance().setText(Integer.toString(playerUi.getPlayer().getCash()));

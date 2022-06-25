@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userInterface;
 
 import casino.Player;
@@ -23,10 +18,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import slots.Slots;
 
-/**
- *
- * @author Karin Whiting UCF COP 3330
- */
+
 public class SlotsUi extends JPanel
 {
     private CasinoUi casinoUi;
@@ -47,8 +39,8 @@ public class SlotsUi extends JPanel
         
         rand = new Random();
 
-        initImages();
-        initComponents();
+        initImages();           
+        initComponents();       //initializes the UI.
     }
     
     private void initComponents()
@@ -113,12 +105,14 @@ public class SlotsUi extends JPanel
             return null;
         }
     }
-        // this method makes the image resize smoothly so it renders well in the UI
+    // this method makes the image resize smoothly so it renders well in the UI
     private ImageIcon imageResize(ImageIcon icon)
     {
+        String tempstr = icon.getDescription();
         Image image = icon.getImage();
         Image newImage = image.getScaledInstance(100, 75, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newImage);
+        icon.setDescription(tempstr);
         return icon;
     }
 
@@ -170,7 +164,6 @@ public class SlotsUi extends JPanel
     
     private void results()
     {
-            JOptionPane.showMessageDialog(null, "Three symbols matched, you won $50!");
         // three symbols matched
         if(spinNums.get(0) == spinNums.get(1) && 
            spinNums.get(0)== spinNums.get(2))
@@ -191,6 +184,7 @@ public class SlotsUi extends JPanel
             JOptionPane.showMessageDialog(null, "No symbols matched");
         }
 
+        //updates the UI to reflect changes to player's cash value.
         casinoUi.updatePlayerUi();
     }
 }

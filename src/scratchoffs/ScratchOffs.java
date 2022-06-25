@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package scratchoffs;
 
 import casino.Player;
 import constants.Constants;
 import java.util.Scanner;
 
-/**
- *
- * @author Karin Whiting UCF COP 3330
- */
 public class ScratchOffs
 {
     private Player player;
